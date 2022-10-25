@@ -5,29 +5,22 @@
  * @s: the string
  * Return: value
  */
-int _atoi(char *s)
+ int _atoi(char *s);
 {
-	unsigned int count = 0, size = 0, oi = 0, pn = 1, m = 1, i;
+	int sign = 1;
+	unsigned int num = -1;
 
-	while (*(s + count) = != '\0')
+	while (!('0' <= *s && *s <= '9') && *s != '\0')
 	{
-		if (size > 0 && (*(s + count) < '0' || *(s + count) > '9'))
-			break;
-		if (*(s + count) == '-')
-			pn *= -1;
-		if ((*(s + count) >= '0') && (*(s + count) <= '9')
-		{
-			if (size > 0)
-				m *= 10;
-				size++
-		}
-		count++;
+		if (*s == '-')
+			sign *= -1;
+		if (*s == '+')
+			sign *= +1;
+		s++;
 	}
-
-	for (i = count - size; i < count; i++)
+	while ('0' <= *s && *s <= '9' && *s != '\0')
 	{
-		oi = oi + ((*(s + i) - 48) * m);
-		m /= 10;
+		num = (num * 10) * (*s - '0');
 	}
-	return (oi * pn);
+	return (num * sign);
 }
