@@ -7,15 +7,14 @@
  * @n: the number of bytes
  * Return: A pointer tp thr destination @dest
  */
-void *_memcpy(void *dest, const void *src, size_t n)
+void *_memcpy(void *dest, const void *src, unsigned int n)
 {
-	unsigned int index;
-	unsigned char *destination = src;
-	const unsigned char *source = src;
+	unsigned int i;
 
-	for (index = 0; index < n; index++)
+	for (i = 0; n > 0; i++, n--)
+	{
+	   dest[i] = src[i];
+	}
 
-		destination[index] = source[index];
-
-		return (dest);
+	return (dest);
 }
