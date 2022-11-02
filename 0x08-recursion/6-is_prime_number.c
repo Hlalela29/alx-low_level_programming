@@ -10,7 +10,7 @@ int find_multipliers(int n, int i)
 {
 	if (i == n)
 		return (1);
-	if (n % == 0)
+	if (n % i == 0)
 		return (0);
 	else
 		return (find_multipliers(n, i + 1));
