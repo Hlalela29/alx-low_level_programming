@@ -25,7 +25,7 @@ char **strtow(char *str)
 	for (k = 0; k < j; k++)
 	{
 		array[i] = str[k];
-		i++
+		i++;
 
 	}
 	array[i] = '\0';
