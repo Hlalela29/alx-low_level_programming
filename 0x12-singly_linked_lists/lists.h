@@ -10,6 +10,8 @@
  * @str: string pointer to store node data
  * @len: string length
  * @next: points to the next node
+ *
+ * Description: singly list node structure for project
  */
 typedef struct list_s
 {
