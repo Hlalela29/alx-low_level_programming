@@ -1,5 +1,5 @@
-#ifndef LIST_H
-#define LIST_H
+#ifndef LISTS_H
+#define LISTS_H
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -9,6 +9,7 @@
  * struct list_s - linked list
  * @str: string pointer to store node data
  * @len: string length
+ * @next: points to the next node
  */
 typedef struct list_s
 {
@@ -24,4 +25,4 @@ list_t *add_node_end(list_t **head, const char *str);
 void free_list(list_t *head);
 void print_before_main(void)__attribute__((constructor));
 
-#endif
+#endif /* LISTS_H */
