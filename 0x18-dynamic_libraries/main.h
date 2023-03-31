@@ -1,5 +1,5 @@
-#ifndef HOLBERTON_H_
-#define HOLBERTON_H_
+#ifndef MAIN_H_
+#define MAIN_H_
 #define EXIT_SUCCESS 0
 
 int _putchar(char c);
@@ -23,4 +23,4 @@ unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
 
-#endif /* HOLBERTON_H_ */
+#endif /* MAIN_H_ */
