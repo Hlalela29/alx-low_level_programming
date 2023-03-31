@@ -1,22 +1,20 @@
 #include "main.h"
-
 /**
- * _memset - files memory with a constant byte pointed to by @s with the consta
- * @s: memory area
- * @b: the byte
- * @n: number of bytes to fill
- * description _memset: over there
- * Return: pointer to @s
+ * _memset - fill a block of memory with a specific value
+ * @s: starting address of memory to be filled
+ * @b: the desired value
+ * @n: number of bytes to be changed
+ *
+ * Return: changed array with new value for n bytes
  */
-char *_memset(void *s, int c, size_t n)
+char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int index;
-	unsigned char *memory = s, value = c;
+	int i = 0;
 
-	for (index = 0; index < n; index++)
+	for (; n > 0; i++)
 	{
-		memory[index] = value;
-
-		return (memory);
+		s[i] = b;
+		n--;
 	}
+	return (s);
 }
